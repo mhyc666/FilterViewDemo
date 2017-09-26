@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+<LinearLayout
+    android:id="@+id/ll_head_layout"
+    android:gravity="center"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <LinearLayout
+        android:id="@+id/ll_fl"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_fl"
+            android:text="分类"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_fl"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/home_down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:id="@+id/ll_px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_px"
+            android:text="排序"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_px"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/home_down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:background="@color/black"/>
+    <ImageView
+        android:id="@+id/iv"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:id="@+id/ll_jg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_jg"
+            android:text="价格优先"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_mask_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wechat"/>
+
+        <LinearLayout
+            android:id="@+id/ll_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_left"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/font_black_6"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:background="#ffffff"
+                android:id="@+id/rv_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
